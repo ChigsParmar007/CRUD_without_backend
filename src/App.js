@@ -8,7 +8,7 @@ import Form from './Components/Form';
 import { useState } from 'react';
 
 function App() {
-  const [dept, setDept] =  useState([{'ID' : 1, 'Name' : 'DCS'}, {'ID' : 2, "Name" : 'DOE'}, {'ID' : 3, "Name" : 'DOJ'}, {'ID' : 2, "Name" : 'DSS'}]);
+  const[dept, setDept] =  useState([{'ID' : 1, 'Name' : 'DCS'}, {'ID' : 2, "Name" : 'DOE'}, {'ID' : 3, "Name" : 'DOJ'}, {'ID' : 2, "Name" : 'DSS'}]);
   const [stud, setStud] = useState([{'Enrollment_No' : 1, 'Name' : 'Chirag', 'Department' : 'DCS', 'Tution_Fees_Status' : 'Yes', 'Year' : '2nd'},
                                     {'Enrollment_No' : 2, 'Name' : 'Khushi', 'Department' : 'DCS', 'Tution_Fees_Status' : 'Yes', 'Year' : '2nd'},
                                     {'Enrollment_No' : 3, 'Name' : 'Shruti', 'Department' : 'DCS', 'Tution_Fees_Status' : 'Yes', 'Year' : '2nd'}]);
