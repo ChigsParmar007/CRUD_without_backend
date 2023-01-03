@@ -4,7 +4,6 @@ import { useState } from 'react';
 const Students = (props) => {
     const [students, setStudents] = useState(props.Stud);
     const delstud = (id) => {
-        // const index = students.findIndex(x => x.Enrollment_No === id);
         const filterData = students.filter((value) => value.Enrollment_No !== id);
         setStudents(filterData)
         props.returnNewStuds(students);

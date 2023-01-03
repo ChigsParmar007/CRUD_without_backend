@@ -16,6 +16,10 @@ function App() {
     setStud(Studs);
   }
 
+  function AddNewStud (NewS) {
+    setStud(stud.concat(NewS));
+  }
+
   return (
     <>
     <Header />
@@ -24,7 +28,7 @@ function App() {
         <Route path = '/Dashboard' element = { <Dashboard /> } exact />
         <Route path = '/Department' element = { <Department Depts = {dept} /> } exact />
         <Route path = '/Students' element = { <Students Stud = {stud} returnNewStuds = {newStuds} /> } exact />
-        <Route path = '/Form' element = { <Form /> } exact />
+        <Route path = '/Form' element = { <Form returnNewStud  = {AddNewStud}/> } exact />
       </Routes>
     </>
   );
