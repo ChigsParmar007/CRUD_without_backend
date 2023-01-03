@@ -5,6 +5,7 @@ import Dashboard from './Components/Dashboard';
 import Department from './Components/Departments';
 import Students from './Components/Students';
 import Form from './Components/Form';
+import UpdateForm from './Components/UpdateForm';
 import { useState } from 'react';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path = '/Department' element = { <Department Depts = {dept} /> } exact />
         <Route path = '/Students' element = { <Students Stud = {stud} returnNewStuds = {newStuds} /> } exact />
         <Route path = '/Form' element = { <Form returnNewStud  = {AddNewStud}/> } exact />
+        <Route path = '/UpdateForm/:id' element = { <UpdateForm Stud = {stud} returnNewStud = {newStuds} /> } exact />
       </Routes>
     </>
   );

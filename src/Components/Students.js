@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const Students = (props) => {
+    const navigate = useNavigate();
     const [students, setStudents] = useState(props.Stud);
     const delstud = (id) => {
         const filterData = students.filter((value) => value.Enrollment_No !== id);
@@ -10,7 +12,7 @@ const Students = (props) => {
     }
 
     const updstud = (id) => {
-        alert(id);
+        navigate(`/UpdateForm/${id}`)
     }
   return (
     <>
