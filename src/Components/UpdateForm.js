@@ -22,7 +22,6 @@ const UpdateForm = (props) => {
     }, []);
     
     const onsubmit = () => {
-        alert("ok")
         const NewS = [{
           'Enrollment_No' : id,
           'Name' : name,
@@ -30,7 +29,6 @@ const UpdateForm = (props) => {
           'Tution_Fees_Status' : tution,
           'Year' : year
         }]
-        console.log(NewS);
         const newlist = students.reduce((acc, value) => value.Enrollment_No === id ? acc.concat(NewS) : acc.concat(value), []);
         props.returnNewStud(newlist);
         navigate('/Students');
